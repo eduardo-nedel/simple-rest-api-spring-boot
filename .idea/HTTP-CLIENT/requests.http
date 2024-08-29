@@ -1,0 +1,44 @@
+### Create Customer
+POST {{baseUrl}}/customers
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "jon@jjj.com",
+    "address": "123 Main St"
+}
+
+### List Customer
+GET {{baseUrl}}/customers
+Accept: application/json
+
+<> 2024-08-29T173939.200.json
+<> 2024-08-29T173910.200.json
+<> 2024-08-29T173858.500.json
+<> 2024-08-29T173722.500.json
+<> 2024-08-29T173646.500.json
+
+### Get Customer
+GET {{baseUrl}}/customers/8
+Accept: application/json
+
+<> 2024-08-29T173930.200.json
+<> 2024-08-29T173919.200.json
+<> 2024-08-29T173915.500.json
+
+### Update Customer
+PUT {{baseUrl}}/customers/8
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "jon@jj.com",
+  "address": "123 Main St"
+}
+
+<> 2024-08-29T173927.200.json
+<> 2024-08-29T173924.200.json
+
+### Delete Customer
+DELETE {{baseUrl}}/customers/8
+Accept: application/json

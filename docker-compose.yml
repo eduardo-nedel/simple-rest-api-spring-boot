@@ -1,0 +1,21 @@
+services:
+  postgresql:
+    container_name: postgresql
+    image: postgres:16.2
+    environment:
+      POSTGRES_USER: ntloc
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - postgresql
+    restart: always
+
+networks:
+  postgresql:
+    driver: bridge
+
+volumes:
+  postgresql:
